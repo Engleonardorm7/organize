@@ -17,13 +17,14 @@ int main()
    int num;
 
 for(int i=0;i<sizeof(list);i++){
+	int pos=i;
 	num=list[i];
 	
-	while((i>0)&&list[i-1]>num){
-		list[i]=list[i-1];
-		i--;
+	while((pos>0)&&list[pos-1]>num){
+		list[pos]=list[pos-1];
+		pos--;
 	}
-	list[i]=num;
+	list[pos]=num;
 }
 	for(int j=0;j<sizeof(list);j++){
 	cout<<(list[j]);
