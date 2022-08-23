@@ -12,24 +12,25 @@ using namespace std;
 
 int main()
 {
-    string s;
-    getline(cin, s);
+    string list;
+    getline(cin, list);
    int num;
 
-for(int i=0;i<sizeof(s);i++){
+for(int i=0;i<sizeof(list);i++){
 	
-//for(int k=0;k<i;k++){
-for(int j=1;j<i;j++){
-if(s[j]<s[j-1]){
-num=s[j];
-s[j]=s[j-1];
-s[j-1]=num;
-}
+	for(int k=0;k<i;k++){
+		for(int j=1;j<i;j++){
+			if(list[j]<list[j-1]){
+				num=list[j];
+				list[j]=list[j-1];
+				list[j-1]=num;
+			}
 
+		}
+	}
 }
-}
-for(int j=0;j<sizeof(s);j++){
-printf("%c",s[j]);
+	for(int j=0;j<sizeof(list);j++){
+	cout<<(list[j]);
 
 }
 }
